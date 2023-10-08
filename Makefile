@@ -1,6 +1,5 @@
 compile:
-	gcc untitled.c -no-pie -fno-stack-protector -o rop
-	checksec --file=rop
+	gcc echo.c -no-pie -fno-stack-protector -z execstack -o echo
 
 clean:
-	rm rop
+	rm echo
